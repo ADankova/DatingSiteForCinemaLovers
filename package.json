@@ -1,0 +1,26 @@
+{
+  "name": "kinobuddy",
+  "version": "0.1.0",
+  "private": true,
+  "description": "KinoBuddy — портал, где люди находят компанию, чтобы вместе сходить в кино (MVP, Штутгарт)",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "npm run build:server && npm run build:web",
+    "build:server": "tsc -p tsconfig.json",
+    "build:web": "tsc -p tsconfig.web.json",
+    "start": "node --disable-warning=ExperimentalWarning dist/src/server/index.js",
+    "dev": "npm run build && npm start",
+    "seed:demo": "node --disable-warning=ExperimentalWarning dist/src/server/seed-cli.js",
+    "scrape": "node --disable-warning=ExperimentalWarning dist/src/server/scrapers/run.js",
+    "import:osm": "node --disable-warning=ExperimentalWarning dist/src/server/integrations/osm-import.js",
+    "tmdb:enrich": "node --disable-warning=ExperimentalWarning dist/src/server/integrations/tmdb-enrich.js",
+    "test": "npm run build && node --disable-warning=ExperimentalWarning --test \"dist/test/*.test.js\""
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.0"
+  }
+}

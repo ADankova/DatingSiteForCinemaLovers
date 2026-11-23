@@ -1,0 +1,10 @@
+{
+  "_comment": "Источники афиши. url — страница расписания НА САЙТЕ КИНОТЕАТРА. Перед включением (enabled: true) проверьте правила сайта и что страница содержит разметку schema.org ScreeningEvent; иначе напишите отдельный адаптер в src/server/scrapers и добавьте его в ADAPTERS (run.ts).",
+  "sources": [
+    { "cinemaSlug": "delphi-arthaus", "adapter": "jsonld", "url": "", "enabled": false },
+    { "cinemaSlug": "atelier-am-bollwerk", "adapter": "jsonld", "url": "", "enabled": false },
+    { "cinemaSlug": "corso-vaihingen", "adapter": "jsonld", "url": "", "enabled": false },
+    { "cinemaSlug": "gloria", "adapter": "jsonld", "url": "", "enabled": false },
+    { "cinemaSlug": "cinemaxx-liederhalle", "adapter": "jsonld", "url": "", "enabled": false }
+  ]
+}
